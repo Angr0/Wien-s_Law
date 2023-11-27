@@ -46,45 +46,57 @@ function setup() {
 
 function draw() {
 dx = (TWO_PI / wavelength) * xspacing;
-//wavelength= cSlider.value()/10;
 wavelength= cSlider.value()/10;
 updateValues();
-  var vc = cSlider.value()
-  if ((399<vc) && (vc<455)){
-  r=177;
-  g=7;
-  b=248;
+  var vc = wavelength*3;
+  if ((380<=vc) && (vc<435)){
+  r=101;
+  g=10;
+  b=166;
   }
   
-  if ((455<vc) && (vc<492)) {
-  r=20;
-  g=64;
-  b=253;
+  if ((435<=vc) && (vc<500)) {
+  r=15;
+  g=10;
+  b=166;
   }
   
-  if ((492<vc) && (vc<577)){
-  r=49;
-  g=203;
-  b=37;
+  if ((500<=vc) && (vc<520)){
+  r=14;
+  g=244;
+  b=235;
   }
   
-  if ((577<vc) && (vc<597)){
+  if ((520<=vc) && (vc<565)){
+  r=10;
+  g=168;
+  b=5;
+  }
+  
+  if ((565<=vc) && (vc<590)){
   r=252;
   g=255;
   b=0;
   }
   
-  if ((597<vc) && (vc<620)){
-  r=255;
-  g=150;
-  b=0;
+  if ((590<=vc) && (vc<625)){
+  r=242;
+  g=142; 
+  b=2;
   }
-  
-  if ((620<vc) && (vc<700)){
-  r=255;
+
+  if ((625<=vc) && (vc<740)){
+  r=242;
+  g=2; 
+  b=2;
+  }
+
+  if (740<=vc){
+  r=0;
   g=0; 
   b=0;
   }
+
   background(256);
   renderWave();
   calcWave();
